@@ -84,3 +84,6 @@ bash
 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+Live preview : https://language-translator-blond.vercel.app/ 
+
