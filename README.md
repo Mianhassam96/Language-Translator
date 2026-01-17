@@ -1,15 +1,6 @@
 MultiMian Language Translator 🌐
 
 MultiMian Language Translator is a user-friendly, responsive language translation web application. It provides real-time translation, text-to-speech, and quick copy functionalities, enabling users to switch languages and listen to translations with ease.
-Table of Contents
-
-    Features
-    Screenshots
-    Installation
-    Usage
-    Technologies
-    Contributing
-    License
 
 Features
 
