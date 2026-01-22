@@ -10,9 +10,7 @@ Features
     Copy to Clipboard: Easily copy your translated or input text with a single click.
     Responsive Design: Compatible with both desktop and mobile screens for easy access on any device.
 
-Screenshots
 
-<!-- Add a screenshot in an assets folder and link it here -->
 Installation
 
     Clone the repository:
