@@ -1,0 +1,251 @@
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #4b0082, #8a2be2); /* Gradient background */
+}
+
+header {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 15px;
+    margin: 15px 0;
+    background-color: #2e1a47; /* Darker background for header */
+    color: #f3f3f3;            /* Light khaki text color */
+    position: fixed;
+    top: 10px;                 /* Adds space above header */
+    width: 60%;
+    z-index: 1;
+    border-radius: 8px;        /* Smoother corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow for a floating effect */
+    margin-top: 100px; /* Space below the fixed header */
+}
+
+.wrapper {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.wrapper .text-input {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+}
+
+.text-input .to-text {
+    border-radius: 0;
+    border-left: 1px solid #ddd;
+}
+
+.text-input textarea {
+    height: 250px;
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    background: #f7f7f7;
+    font-size: 18px;
+    padding: 15px;
+    color: #333;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.text-input textarea:focus {
+    background: #eef2ff;
+}
+
+.text-input textarea::placeholder {
+    color: #9c9c9c;
+}
+
+.controls, li, .icons, .icons i {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.controls {
+    list-style: none;
+    padding: 12px 15px;
+}
+
+.controls .row .icons {
+    width: 38%;
+}
+
+.controls .row .icons i {
+    width: 50px;
+    color: #4b0082;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.2s ease;
+    justify-content: center;
+}
+
+.controls .row .icons i:hover {
+    color: #8a2be2;
+    transform: scale(1.1);
+}
+
+.controls .row.from .icons {
+    padding-right: 15px;
+    border-right: 1px solid #ddd;
+}
+
+.controls .row.to .icons {
+    padding-left: 15px;
+    border-left: 1px solid #ddd;
+}
+
+.controls .row select {
+    color: #333;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    background: none;
+    padding-left: 5px;
+}
+
+.controls .exchange {
+    color: #adadad;
+    cursor: pointer;
+    font-size: 18px;
+    transition: color 0.3s, transform 0.2s ease;
+}
+
+.controls .exchange:hover {
+    color: #4b0082;
+    transform: rotate(180deg);
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow for a floating effect */
+    margin-top: 100px; /* Space below the fixed header */
+}
+
+@media (max-width: 660px) {
+    .container {
+        padding: 20px;
+    }
+    .wrapper .text-input {
+        flex-direction: column;
+    }
+    .text-input .to-text {
+        border-left: 0;
+        border-top: 1px solid #ddd;
+    }
+    .text-input textarea {
+        height: 200px;
+    }
+    .controls .row .icons {
+        display: none;
+    }
+    .container button {
+        padding: 13px;
+        font-size: 16px;
+    }
+    .controls .row select {
+        font-size: 16px;
+    }
+    .controls .exchange {
+        font-size: 16px;
+    }
+}
+
+/* New Styles for Enhanced Features */
+.char-counter {
+    text-align: right;
+    font-size: 12px;
+    color: #999;
+    padding: 10px 15px;
+    border-top: 1px solid #ddd;
+}
+
+.container button {
+    width: 48%;
+    padding: 14px;
+    outline: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-right: 2%;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #4b0082, #8a2be2);
+    transition: background 0.3s ease, transform 0.2s;
+    display: inline-block;
+}
+
+.container button#clearBtn {
+    margin-right: 0;
+    background: linear-gradient(135deg, #d3d3d3, #a9a9a9);
+    color: #333;
+}
+
+.container button:hover {
+    background: linear-gradient(135deg, #8a2be2, #4b0082);
+    transform: translateY(-3px); /* Lift effect */
+}
+
+.container button#clearBtn:hover {
+    background: linear-gradient(135deg, #a9a9a9, #808080);
+}
+
+.container button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.error-message {
+    display: none;
+    color: #d32f2f;
+    background: #ffebee;
+    padding: 12px 15px;
+    border-radius: 6px;
+    margin-top: 15px;
+    border-left: 4px solid #d32f2f;
+    font-size: 14px;
+}
+
+.error-message.show {
+    display: block;
+}
+
+i[role="button"] {
+    cursor: pointer;
+}
+
+i[role="button"]:focus {
+    outline: 2px solid #4b0082;
+    outline-offset: 2px;
+}
