@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next build && next export",
+    "deploy": "npm run export && gh-pages -d out",
     "start": "next start",
     "lint": "next lint"
   },
@@ -24,6 +26,7 @@
     "postcss": "^8.4.0",
     "autoprefixer": "^10.4.0",
     "eslint": "^8.53.0",
-    "eslint-config-next": "^14.0.0"
+    "eslint-config-next": "^14.0.0",
+    "gh-pages": "^6.1.1"
   }
 }
