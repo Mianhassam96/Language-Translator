@@ -69,7 +69,7 @@ NEXT_PUBLIC_TRANSLATE_API_URL=your_api_url_here
 
 📦 Installation & Setup
 # Clone the repository
-git clone https://github.com/your-username/mianlingo.git
+git clone https://github.com/Mianhassam96/MianLingo.git
 
 # Navigate into the project
 cd mianlingo
