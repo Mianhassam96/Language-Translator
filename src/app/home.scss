@@ -1,0 +1,110 @@
+.home {
+  min-height: 100vh;
+  background: radial-gradient(
+    circle at top,
+    rgba(34, 197, 94, 0.08),
+    transparent 45%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1.5rem;
+}
+
+.hero {
+  max-width: 900px;
+  text-align: center;
+  color: var(--text);
+  animation: fadeUp 0.8s ease-out;
+
+  h1 {
+    font-family: "Fugaz One", system-ui, sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: 1px;
+    margin-bottom: 1.2rem;
+
+    span {
+      display: inline-block;
+      background: linear-gradient(90deg, #22c55e, #38bdf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 900;
+    }
+  }
+
+  p {
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: color-mix(in srgb, var(--text) 70%, transparent);
+  }
+}
+
+/* ACTION BUTTONS */
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+
+  a {
+    text-decoration: none; /* 🔥 underline removed */
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.85rem 2.2rem;
+    border-radius: 999px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .primary {
+    background: linear-gradient(135deg, #22c55e, #3b82f6);
+    color: #ffffff;
+    box-shadow: 0 10px 25px rgba(34, 197, 94, 0.35);
+
+    &:hover {
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 16px 35px rgba(34, 197, 94, 0.45);
+    }
+  }
+
+  .secondary {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(6px);
+
+    &:hover {
+      background: var(--card);
+      transform: translateY(-2px);
+    }
+  }
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 640px) {
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
